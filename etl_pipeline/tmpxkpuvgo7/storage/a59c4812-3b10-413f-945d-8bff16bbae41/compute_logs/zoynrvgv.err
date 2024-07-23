@@ -1,0 +1,21 @@
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - 47392 - LOGS_CAPTURED - Started capturing logs in process (pid: 47392).
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - 47392 - youtube_information - STEP_START - Started execution of step "youtube_information".
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - 47392 - youtube_information - LOADED_INPUT - Loaded input "bronze_youtube_information" using input manager "minio_io_manager"
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - 47392 - youtube_information - STEP_INPUT - Got input "bronze_youtube_information" of type "Any". (Type check passed).
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - 47392 - youtube_information - STEP_OUTPUT - Yielded output "youtube_information" of type "DataFrame". (Type check passed).
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - youtube_information - Schema: public, Table: youtube_information
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - youtube_information - Connected to PostgreSQL: <sqlalchemy.pool.base._ConnectionFairy object at 0x7fb6139a70d0>
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - youtube_information - Primary keys: ['channels_rank']
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - youtube_information - Cursor info: <cursor object at 0x7fb6142b5210; closed: 0>
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mINFO[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - youtube_information - PostgreSQL version: ('PostgreSQL 15.7 (Debian 15.7-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit',)
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - youtube_information - Error while handling output to PostgreSQL: relation "public.youtube_information" does not exist
+LINE 1: ...T EXISTS youtube_information_tmp_2024_07_23 (LIKE public.you...
+                                                             ^
+[0m
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - youtube_information - Error while testing handle_output to PostgreSQL: relation "public.youtube_information" does not exist
+LINE 1: SELECT COUNT(*) FROM public.youtube_information;
+                             ^
+[0m
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - 47392 - youtube_information - ASSET_MATERIALIZATION - Materialized value warehouse public youtube_information.
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - 47392 - youtube_information - HANDLED_OUTPUT - Handled output "youtube_information" using IO manager "psql_io_manager"
+[32m2024-07-23 16:32:04 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a59c4812-3b10-413f-945d-8bff16bbae41 - 47392 - youtube_information - STEP_SUCCESS - Finished execution of step "youtube_information" in 256ms.

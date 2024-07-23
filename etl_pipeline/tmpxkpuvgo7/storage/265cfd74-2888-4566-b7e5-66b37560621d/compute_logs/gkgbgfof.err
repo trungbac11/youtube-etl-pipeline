@@ -1,0 +1,23 @@
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - 52943 - LOGS_CAPTURED - Started capturing logs in process (pid: 52943).
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - 52943 - youtube_information - STEP_START - Started execution of step "youtube_information".
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - 52943 - youtube_information - LOADED_INPUT - Loaded input "bronze_youtube_information" using input manager "minio_io_manager", from output "result" of step "bronze__youtube__bronze_youtube_information"
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - 52943 - youtube_information - STEP_INPUT - Got input "bronze_youtube_information" of type "Any". (Type check passed).
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - 52943 - youtube_information - STEP_OUTPUT - Yielded output "youtube_information" of type "DataFrame". (Type check passed).
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Schema: public, Table: youtube_information
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Connected to PostgreSQL: <sqlalchemy.pool.base._ConnectionFairy object at 0x7f3adedce470>
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Primary keys: ['channels_rank']
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Cursor info: <cursor object at 0x7f3adf9c9300; closed: 0>
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mINFO[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - PostgreSQL version: ('PostgreSQL 15.7 (Debian 15.7-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit',)
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Log for creating temp table: (0,)
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Inserting data into temp table
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Checking data inserted
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mINFO[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Number of rows inserted: (995,)
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Table has primary keys, upserting data
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Upserting data into public.youtube_information
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - COMMIT
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mINFO[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Number of rows upserted in public.youtube_information: (995,)
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - youtube_information - Error while testing handle_output to PostgreSQL: table "youtube_information_tmp_2024_07_23" does not exist
+[0m
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - 52943 - youtube_information - ASSET_MATERIALIZATION - Materialized value warehouse public youtube_information.
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - 52943 - youtube_information - HANDLED_OUTPUT - Handled output "youtube_information" using IO manager "psql_io_manager"
+[32m2024-07-23 16:34:01 +0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 265cfd74-2888-4566-b7e5-66b37560621d - 52943 - youtube_information - STEP_SUCCESS - Finished execution of step "youtube_information" in 446ms.

@@ -4,6 +4,7 @@ services:
     container_name: de_mysql
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./load_dataset:/tmp/load_dataset
     ports:
       - "3306:3306"
     env_file: 
@@ -97,6 +98,7 @@ services:
     container_name: de_psql
     volumes:
       - ./postgresql:/var/lib/postgresql/data
+      - ./load_dataset:/tmp/load_dataset
     ports:
       - "5432:5432"
     env_file:

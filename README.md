@@ -15,20 +15,29 @@ A lightweight prototype system that allows Data Analysts to define customer metr
 
 ## Setup instructions
 ### Prerequisites
-- Python 3.7+
+- Python 3.12+
 - pip package manager
 
 ### Installation Steps
 1. **Download the project files**
-2. **Install dependencies:**
-- pip install -r requirements.txt
-3. **Prepare data files:**
-Place customers.csv, orders.csv, and order_items.csv in the data/ directory
 
-4. **Initialize the database:**
+2. **Create virtual enviroments**
+- python -m venv venv
+
+3. **Active**
+- source venv/bin/activate
+
+4. **Install dependencies:**
+- pip install --upgrade pip
+- pip install -r requirements.txt
+
+5. **Prepare data files:**
+Place "customers.csv", "orders.csv", and "order_items.csv" in the data/ directory
+
+6. **Initialize the database:**
 - python src/setup_database.py
 
-5. **Verify setup:**
+7. **Verify setup:**
 - python src/validate_yaml.py
 
 ## How to add a new metric
@@ -78,7 +87,7 @@ project/
 `python src/run_metrics.py`
 
 #### Cleanup Test:
-`python src/cleanup_database.py`
+`python src/clean_database.py`
 
 ### Test Cases
 #### Validation Test Cases

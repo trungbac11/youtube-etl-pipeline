@@ -14,9 +14,6 @@ This document describes how AI was used to complete the self-serve metrics syste
 A lightweight prototype system that allows Data Analysts to define customer metrics using YAML + SQL, with automatic materialization in DuckDB.
 
 ## Setup instructions
-- Python 3.7+
-- pip package manager
-
 ### Prerequisites
 - Python 3.7+
 - pip package manager
@@ -35,16 +32,16 @@ Place customers.csv, orders.csv, and order_items.csv in the data/ directory
 - python src/validate_yaml.py
 
 ## How to add a new metric
-Step 1: **Create YAML Metric Definition**
+**Step 1: Create YAML Metric Definition**
 - Create a new .yaml file in the metrics/ directory with this structure
 
-Step 2: Validate the Metric
+**Step 2: Validate the Metric**
 - Run validation to check for errors: python src/validate_yaml.py
 
-Step 3:  Execute the Metric
+**Step 3:  Execute the Metric**
 - Run the metric to create the table in DuckDB: python src/run_metrics.py
 
-This will:
+**This will:**
 - Read all YAML files from /metrics
 - Execute each SQL query against DuckDB
 - Create or replace tables named after each metric
@@ -70,9 +67,6 @@ project/
 
 
 ### Testing Procedures
-
-#### Database Setup Test
-`python src/setup_database.py`
 
 #### Database Setup Test:
 `python src/setup_database.py`

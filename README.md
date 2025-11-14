@@ -23,20 +23,15 @@ A lightweight prototype system that allows Data Analysts to define customer metr
 
 ### Installation Steps
 1. **Download the project files**
-2. **Create virtual enviroments**
-- python -m venv venv
-3. **Active**
-- source venv/bin/activate
-4. **Install dependencies:**
-- pip install --upgrade pip
+2. **Install dependencies:**
 - pip install -r requirements.txt
-5. **Prepare data files:**
+3. **Prepare data files:**
 Place customers.csv, orders.csv, and order_items.csv in the data/ directory
 
-6. **Initialize the database:**
+4. **Initialize the database:**
 - python src/setup_database.py
 
-7. **Verify setup:**
+5. **Verify setup:**
 - python src/validate_yaml.py
 
 ## How to add a new metric
@@ -57,6 +52,7 @@ This will:
 
 ## Development guideline
 
+### Project Structure
 project/
 ├── data/                   # Source CSV files
 ├── metrics/               # Metric definitions (YAML)
@@ -70,24 +66,28 @@ project/
 │   └── cleanup_database.py # DB cleanup
 ├── requirements.txt       # Dependencies
 ├── README.md              # Documentation
-└── AI_USAGE.md            # Documentation
+└── AI_USAGE.md            # AI collaboration documentation
 
-Testing Procedures
-Manual Testing
 
-Database Setup Test:
-- python src/setup_database.py
+### Testing Procedures
 
-Validation Test:
-- python src/validate_yaml.py
+#### Database Setup Test
+`python src/setup_database.py`
 
-Execution Test:
-- python src/run_metrics.py
+#### Database Setup Test:
+`python src/setup_database.py`
 
-Cleanup Test:
-- python src/cleanup_database.py
+#### Validation Test:
+`python src/validate_yaml.py`
 
-**Validation Test Cases**
+#### Execution Test:
+`python src/run_metrics.py`
+
+#### Cleanup Test:
+`python src/cleanup_database.py`
+
+### Test Cases
+#### Validation Test Cases
 - Test with missing required fields
 
 - Test with invalid YAML syntax
@@ -96,16 +96,16 @@ Cleanup Test:
 
 - Test with valid complete metric definitions
 
-**Error Handling**
+#### Error Handling
 - All scripts include try-catch blocks for proper error handling
 
 - Validation provides clear error messages for debugging
 
 - Execution script continues processing other metrics if one fails
 
-**Maintenance**
-- Regular dependency updates: pip install -r requirements.txt --upgrade
+#### Maintenance
+- Regular dependency updates: `pip install -r requirements.txt --upgrade`
 
-- Database cleanup when needed: python src/cleanup_database.py
+- Database cleanup when needed: `python src/cleanup_database.py`
 
 - Backup important data before major changes

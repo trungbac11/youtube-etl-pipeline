@@ -4,6 +4,12 @@
 
 This document describes how AI was used to complete the self-serve metrics system assignment.
 
+| Prompt Goal | Example Prompt | AI Response Summary | How You Used or Modified It | What You Learned / Observed |
+|-------------|----------------|---------------------|----------------------------|----------------------------|
+| [Example] Draft YAML validation logic | "Write a Python function that checks if a YAML file includes keys: metric_name, description, schedule, sql." | Generated a working outline but used PyYAML incorrectly. | Took structure, fixed import errors, added exception handling. | AI was good at scaffolding but needed correction for YAML edge cases. |
+| [Example] Debug SQL syntax in DuckDB | "Why does DuckDB fail on `DATE('2023-09-01')` in a WHERE clause?" | Explained DATE syntax differences and suggested using `DATE '2023-09-01'`. | Applied change directly to query. | AI was accurate; learned DuckDB's date literal format. |
+
+
 ## AI Collaboration Examples
 
 | Task | Prompt or Question Used | Outcome / What You Learned |

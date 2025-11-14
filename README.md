@@ -16,39 +16,39 @@ A lightweight prototype system that allows Data Analysts to define customer metr
 ## Setup instructions
 ### Prerequisites
 - Python 3.12+
-- pip package manager
+- Pip package manager
 
 ### Installation Steps
 1. **Download the project files**
 
 2. **Create virtual enviroments**
-- python -m venv venv
+`python -m venv venv`
 
 3. **Active**
-- source venv/bin/activate
+`source venv/bin/activate`
 
 4. **Install dependencies:**
-- pip install --upgrade pip
-- pip install -r requirements.txt
+`pip install --upgrade pip`
+`pip install -r requirements.txt`
 
 5. **Prepare data files:**
 Place "customers.csv", "orders.csv", and "order_items.csv" in the data/ directory
 
 6. **Initialize the database:**
-- python src/setup_database.py
+`python src/setup_database.py`
 
 7. **Verify setup:**
-- python src/validate_yaml.py
+`python src/validate_yaml.py`
 
 ## How to add a new metric
 **Step 1: Create YAML Metric Definition**
 - Create a new .yaml file in the metrics/ directory with this structure
 
 **Step 2: Validate the Metric**
-- Run validation to check for errors: python src/validate_yaml.py
+- Run validation to check for errors: `python src/validate_yaml.py`
 
 **Step 3:  Execute the Metric**
-- Run the metric to create the table in DuckDB: python src/run_metrics.py
+- Run the metric to create the table in DuckDB: `python src/run_metrics.py`
 
 **This will:**
 - Read all YAML files from /metrics
@@ -69,7 +69,7 @@ project/
 │   ├── validate_yaml.py   # YAML validation
 │   ├── run_metrics.py     # Metric execution
 │   ├── setup_database.py  # DB initialization
-│   └── cleanup_database.py # DB cleanup
+│   └── clean_database.py # DB cleanup
 ├── requirements.txt       # Dependencies
 ├── README.md              # Documentation
 └── AI_USAGE.md            # AI collaboration documentation
@@ -109,6 +109,6 @@ project/
 #### Maintenance
 - Regular dependency updates: `pip install -r requirements.txt --upgrade`
 
-- Database cleanup when needed: `python src/cleanup_database.py`
+- Database cleanup when needed: `python src/clean_database.py`
 
 - Backup important data before major changes
